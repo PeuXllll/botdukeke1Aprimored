@@ -48,9 +48,9 @@ const arrayBulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Jul
 const bulan = arrayBulan[moment().format('MM') - 1]
 const config = {
     XBOT: 'ᏴϴͲ ᎠႮ ᏦᎬᏦᎬ', 
-    instagram: 'https://www.instagram.com/kaic_de_paula?r=nametag', 
-    nomer: 'wa.me/5511973027044',
-    youtube: 'https://youtube.com/channel/UC2a7N-vZ5xrDF-0nfcaUspw', 
+    instagram: 'Off', 
+    nomer: '21995988870',
+    youtube: 'Off', 
     whatsapp: 'Comming soon', 
     tanggal: `TANGGAL: ${moment().format('DD')} ${bulan} ${moment().format('YYYY')}`,
     waktu: time
@@ -117,7 +117,7 @@ client.on('group-participants-update', async (anu) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `sayonara pessoa @${num.split('@')[0]} quem sabe possa voltar`
+				teks = `@${num.split('@')[0]} quem sabe possa voltar`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
